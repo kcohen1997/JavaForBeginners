@@ -1,11 +1,11 @@
-## Java Basics
+# Java Basics
 
 Welcome to Java Basics. Here we will be discussing data types, objects, and loops.
 Run App.js to see examples
 
 Source: https://www.tutorialspoint.com/java
 
-## Data Types
+# Data Types
 
 byte:
 
@@ -13,7 +13,7 @@ byte:
 
 There are three types of variables.
 
-# Local Variables
+### Local Variables
 - declared in methods, constructors, or blocks
 - visible only within a declared method constructor or block
 - will be destroyed once it exits the method, constructor or block
@@ -27,7 +27,7 @@ public void printInteger(int n) {
   System.out.println(n);
 }
 
-# Instance Variables
+### Instance Variables
 - declared in a class, but outside of method, constructor or any block
 - When a space is allocated for an object in the heap, a slot for each instance variable value is created?
 - hold values that must be referenced by more than one method, constructor or block, or essential parts of an object's state that must be present throughout the class
@@ -51,7 +51,7 @@ Access Modifiers:
 - Public:	declarations are visible everywhere
 
 
-# Class/Static Variables
+### Class/Static Variables
 - are declared with the static keyword in a class, but outside a method, constructor or a block.
 - It is rare to use static variables other than declared final and used as either public or private constants
   - Constants are variables that are declared as public/private, final, and static. Constant variables never change from their initial value)
@@ -62,7 +62,7 @@ Access Modifiers:
 - can be accessed by calling with the class name ClassName.VariableName.
 - when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
 
-# Ex:
+#### Ex:
 <br>
    private static double salary;
 <br>
