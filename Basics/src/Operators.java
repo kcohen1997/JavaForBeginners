@@ -1,13 +1,4 @@
 public class Operators {
-    public void DataTypes() {
-        byte b = 100;
-        short s = 200;
-        long l = -12332252626L;
-        double d = -42937737.9d;
-        float f = 21.98f;
-        boolean bool = true;
-        char ch = 'Z';
-    }
 
     public void printAll() {
         System.out.println(" ");
