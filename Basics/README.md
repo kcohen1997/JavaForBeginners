@@ -58,7 +58,8 @@ Class/Static Variables
 - when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
 
 Ex:
-- // salary  variable is a private static variable
+<br>
+// salary  variable is a private static variable
    private static double salary;
 
 -  // DEPARTMENT is a constant
