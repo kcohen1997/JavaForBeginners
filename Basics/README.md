@@ -21,8 +21,7 @@ There are three types of variables.
 - implemented at a stack level internally?
 - has no default value, so they must be declared and an initial value should be assigned before first use
 
-Example: 
-<br>
+#### Example: 
 public void printInteger(int n) {
   System.out.println(n);
 }
@@ -37,14 +36,13 @@ public void printInteger(int n) {
 - have default values. For numbers, the default value is 0, for Booleans it is false, and for object references it is null. Values can be assigned during the declaration or within the constructor.
 - can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name.
 
-Examples: 
-<br>
+#### Examples: 
 public boolean hasLettuce;
 <br>
 private int orderNo:
 <br>
 
-Access Modifiers:
+#### Access Modifiers:
 - Default:	declarations are visible only within the package (package private)
 - Private:	declarations are visible within the class only
 - Protected:	declarations are visible within the package or all subclasses
@@ -62,8 +60,7 @@ Access Modifiers:
 - can be accessed by calling with the class name ClassName.VariableName.
 - when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
 
-#### Ex:
-<br>
+#### Examples:
    private static double salary;
 <br>
  Constant:
