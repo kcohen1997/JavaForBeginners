@@ -82,14 +82,13 @@ A literal is a source code representation of a fixed value. They are represented
 
 Literals can be assigned to any primitive type variable. 
 
-<br>
+
 ##### Examples:
 - byte a = 68;
 - char a = 'A';
 
 byte, int, long, and short can be expressed in decimal(base 10), hexadecimal(base 16) or octal(base 8) number systems as well. Prefix 0 is used to indicate octal, and prefix 0x indicates hexadecimal when using these number systems for literals. 
 
-<br>
 ##### Examples:
 - int decimal = 100;
 - int octal = 0144;
