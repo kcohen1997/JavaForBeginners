@@ -7,7 +7,7 @@ Source: https://www.tutorialspoint.com/java
 
 # Data Types
 
-#### Primitive Data Types
+### Primitive Data Types
 
 Primitive datatypes are predefined by the language and named by a keyword.
 
@@ -67,7 +67,7 @@ Primitive datatypes are predefined by the language and named by a keyword.
 - char data type is used to store any character
 - Example: char letterA = 'A'
 
-#### Reference Datatypes
+### Reference Datatypes
 
 - are created using defined constructors of the classes. They are used to access objects. These variables are declared to be of a specific type that cannot be changed. For example, Employee, Puppy, etc.
 - Class objects and various type of array variables come under reference datatype.
@@ -76,7 +76,7 @@ Primitive datatypes are predefined by the language and named by a keyword.
 - Example: Animal animal = new Animal("giraffe"); 
 - See "Objects" section for more details
 
-#### Java Literals
+### Java Literals
 
 A literal is a source code representation of a fixed value. They are represented directly in the code without any computation.
 
