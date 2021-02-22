@@ -40,11 +40,26 @@ Ex:
 - private int orderNo:
 
 Access Modifiers:
-Default:	declarations are visible only within the package (package private)
-Private:	declarations are visible within the class only
-Protected:	declarations are visible within the package or all subclasses
-Public:	declarations are visible everywhere
+- Default:	declarations are visible only within the package (package private)
+- Private:	declarations are visible within the class only
+- Protected:	declarations are visible within the package or all subclasses
+- Public:	declarations are visible everywhere
 
-## Dependency Management
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+Class/Static Variables
+- are declared with the static keyword in a class, but outside a method, constructor or a block.
+- It is rare to use static variables other than declared final and used as either public or private constants
+  - Constants are variables that are declared as public/private, final, and static. Constant variables never change from their initial value)
+- are stored in the static memory
+- are created when a program starts and destroyed when the program stops
+- visibility is similar to instance variables. However, most static variables are declared public since they must be available for users of the class.
+- default values are same as instance variables. For numbers, the default value is 0; for Booleans, it is false; and for object references, it is null. Values can be assigned during the declaration or within the constructor. Additionally, values can be assigned in special static initializer blocks.
+- can be accessed by calling with the class name ClassName.VariableName.
+- when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
+
+Ex:
+- // salary  variable is a private static variable
+   private static double salary;
+
+-  // DEPARTMENT is a constant
+   public static final String DEPARTMENT = "Development ";
