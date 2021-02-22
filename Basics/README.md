@@ -36,8 +36,12 @@ Instance Variables
 - can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name.
 
 Ex: 
-- public boolean hasLettuce;
-- private int orderNo:
+<br>
+public boolean hasLettuce;
+<br>
+<br>
+private int orderNo:
+<br>
 
 Access Modifiers:
 - Default:	declarations are visible only within the package (package private)
@@ -60,7 +64,10 @@ Class/Static Variables
 Ex:
 <br>
 // salary  variable is a private static variable
+<br>
    private static double salary;
-
--  // DEPARTMENT is a constant
+<br>
+ // DEPARTMENT is a constant
+ <br>
    public static final String DEPARTMENT = "Development ";
+   <br>
