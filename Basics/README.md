@@ -21,7 +21,9 @@ Local Variables
 - implemented at a stack level internally?
 - has no default value, so they must be declared and an initial value should be assigned before first use
 
-Ex: public void printInteger(int n) {
+Ex: 
+<br>
+public void printInteger(int n) {
   System.out.println(n);
 }
 
@@ -62,12 +64,10 @@ Class/Static Variables
 - when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
 
 Ex:
-<br>
-// salary  variable is a private static variable
-<br>
+
    private static double salary;
 <br>
- // DEPARTMENT is a constant
+ Constant:
  <br>
    public static final String DEPARTMENT = "Development ";
    <br>
