@@ -174,9 +174,5 @@ private int orderNo:
 - when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
 
 #### Examples:
-   private static double salary;
-<br>
- Constant:
- <br>
-   public static final String DEPARTMENT = "Development ";
-   <br>
+   - private static double salary;
+   - public static final String DEPARTMENT = "Development "; // Constant
