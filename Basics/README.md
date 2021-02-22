@@ -18,7 +18,7 @@ There are three types of variables.
 - visible only within a declared method constructor or block
 - will be destroyed once it exits the method, constructor or block
 - access modifiers cannot be used 
-- implemented at a stack level internally?
+##### -implemented at a stack level internally?
 - has no default value, so they must be declared and an initial value should be assigned before first use
 
 #### Example: 
@@ -28,7 +28,7 @@ public void printInteger(int n) {
 
 ### Instance Variables
 - declared in a class, but outside of method, constructor or any block
-- When a space is allocated for an object in the heap, a slot for each instance variable value is created?
+##### - When a space is allocated for an object in the heap, a slot for each instance variable value is created?
 - hold values that must be referenced by more than one method, constructor or block, or essential parts of an object's state that must be present throughout the class
 - can be declared in class level before or after use
 - access modifiers can be given for instance variables.
