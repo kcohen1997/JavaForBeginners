@@ -11,10 +11,6 @@ byte:
 
 ## Varaibles
 
-Access Modifiers:
-
-Varaibles:
-
 There are three types of variables.
 
 Local Variables
@@ -40,17 +36,14 @@ Instance Variables
 - can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name.
 
 Ex: 
-public boolean hasLettuce;
-private int orderNo:
-
+- public boolean hasLettuce;
+- private int orderNo:
 
 Access Modifiers:
 Default:	declarations are visible only within the package (package private)
 Private:	declarations are visible within the class only
 Protected:	declarations are visible within the package or all subclasses
 Public:	declarations are visible everywhere
-
-
 
 ## Dependency Management
 
