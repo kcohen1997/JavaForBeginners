@@ -167,7 +167,7 @@ Assume Boolean variables A holds true and variable B holds false
 | >>= | Right shift AND assignment operator. | C >>= 2 is same as C = C >> 2 |
 | &= | 	Bitwise AND assignment operator. | C &= 2 is same as C = C & 2 |
 | ^= | bitwise exclusive OR and assignment operator. | C ^= 2 is same as C = C ^ 2 |
-| |= | bitwise inclusive OR and assignment operator. | |
+| \|= | bitwise inclusive OR and assignment operator. | C \|= 2 is same as C = C \| 2 |
 
 
 ### Misc Operators
