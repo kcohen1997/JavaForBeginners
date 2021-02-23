@@ -172,6 +172,19 @@ Assume Boolean variables A holds true and variable B holds false
 
 ### Misc Operators
 
+##### Conditional Operator (? : )
+
+Conditional operator is also known as the ternary operator. This operator consists of three operands and is used to evaluate Boolean expressions. The goal of the operator is to decide, which value should be assigned to the variable.
+
+variable x = (expression) ? value if true : value if false
+
+##### instanceof Operator
+
+This operator is used only for object reference variables. The operator checks whether the object is of a particular type (class type or interface type).
+
+##### Examples:
+ String name = "James";
+ boolean result = name instanceof String;
 
 # Java Literals
 
