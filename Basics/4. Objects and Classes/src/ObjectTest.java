@@ -1,6 +1,6 @@
 public class ObjectTest {
 
-    public void printEmployees() {
+    public void printOrders() {
 
         // Hamburger default: everything on the order
         HamburgerOrder orderOne = new HamburgerOrder();
@@ -9,19 +9,17 @@ public class ObjectTest {
         HamburgerOrder orderTwo = new HamburgerOrder(1, true, false, false, true, false);
 
         System.out.println();
-        System.out.println("Classes and Objects: ");
-        System.out.println("--------------------------");
 
         // Print Order 1
         System.out.println("Order 1: Default");
         // Invoking methods for each object created
-        orderOne.printHamburger();
+        orderOne.printOrder();
         System.out.println();
 
         // Print Order 2
         System.out.println("Order 2: Specific Order");
         // Invoking methods for each object created
-        orderTwo.printHamburger();
+        orderTwo.printOrder();
         System.out.println();
 
         // Change Order using Getters and Setters
@@ -31,7 +29,7 @@ public class ObjectTest {
         // Print Updated Order
         System.out.println();
         System.out.println("Updated Order: ");
-        orderOne.printHamburger();
+        orderOne.printOrder();
         System.out.println();
 
     }

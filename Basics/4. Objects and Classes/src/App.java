@@ -6,7 +6,7 @@ public class App {
         System.out.println("WELCOME TO OBJECTS AND CLASSES: ");
         System.out.println("------------------------------------------- ");
         ObjectTest test = new ObjectTest();
-        test.printEmployees();
+        test.printOrders();
     }
 
 }

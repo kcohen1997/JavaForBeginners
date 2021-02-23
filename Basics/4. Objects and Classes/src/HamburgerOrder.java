@@ -47,14 +47,15 @@ public class HamburgerOrder {
         return orderNo;
     }
 
-    /* Print the Hamburger details */
-    public void printHamburger() {
+    /* Print the Hamburger order details */
+    public void printOrder() {
         System.out.println("Does it have lettuce? " + hasLettuce);
         System.out.println("Does it have tomatoes? " + hasTomatoes);
         System.out.println("Does it have onions? " + hasOnions);
         System.out.println("Does it have pickles? " + hasPickles);
         System.out.println("Does it have mayo? " + hasMayo);
         System.out.println("Order No: " + orderNo);
+        System.out.println();
 
     }
 }
