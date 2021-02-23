@@ -181,7 +181,7 @@ variable x = (expression) ? value if true : value if false
 
 This operator is used only for object reference variables. The operator checks whether the object is of a particular type (class type or interface type).
 
-##### Examples:
+##### Example:
  String name = "James";
  boolean result = name instanceof String;
 
