@@ -32,6 +32,7 @@ public class ObjectTest {
         System.out.println();
         System.out.println("Updated Order: ");
         orderOne.printHamburger();
+        System.out.println();
 
     }
 }
