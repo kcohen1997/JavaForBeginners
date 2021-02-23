@@ -65,3 +65,12 @@ private int orderNo:
 #### Examples:
    - private static double salary;
    - public static final String DEPARTMENT = "Development "; // Constant
+
+## This keyword
+
+this is a keyword in Java which is used as a reference to the object of the current class, with in an instance method or a constructor. Using this you can refer the members of a class such as constructors, variables and methods.
+
+In general, the "this" keyword is used to:
+- Differentiate the instance variables from local variables if they have same names, within a constructor or a method.
+- Call one type of constructor (parametrized constructor or default) from other in a class. It is known as explicit constructor invocation.
+
