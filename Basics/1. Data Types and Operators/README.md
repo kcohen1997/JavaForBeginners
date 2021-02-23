@@ -149,9 +149,9 @@ Assume Boolean variables A holds true and variable B holds false
 
 | Operator  |  Example |
 | ------------- | ------------- |
-| "&&" (logical and)  | (A && B) is false | 
-| "||" (logical or)  | (A || B) is true | 
-| "!" (logical not) |  !(A && B) is true | 
+| && (logical and)  | (A && B) is false | 
+| | | (logical or)  | (A || B) is true | 
+| ! (logical not) |  !(A && B) is true | 
 
 ### Assignment Operators
 
