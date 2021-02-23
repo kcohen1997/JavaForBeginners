@@ -1,10 +1,15 @@
-# Java Basics
+# Objects and Classes
 
-Welcome to Java Basics. Here we will be discussing data types, objects, and loops.
-Run App.js to see examples
+Welcome to Objects and Classess. Run App.js to see the examples
 
 Source: https://www.tutorialspoint.com/java
 
+# Defintions
+- Objects: A representation of a real world entity, like an animal or a person. An object has many characteristics that can be represented/changed inside of a class
+- Classes: the blueprint of an object. An object describes an objects behavior and/or states.
+- Methods: an operation done on an object. Getters and setters are very common examples of methods within a class, setters update a value while getters return a value 
+- Instance Variables: a variable defined in a class. Each object has its own unique set of instance variables
+- Constructor: a special method used to create objects. There are two types of constructors: default (no default values given) and parameterized (specfic default values are provided)
 
 ## Varaibles
 
@@ -19,7 +24,8 @@ There are three types of variables.
 - has no default value, so they must be declared and an initial value should be assigned before first use
 
 #### Example: 
-public void printInteger(int n) {
+public void printInteger() {
+int n= 0;
   System.out.println(n);
 }
 
