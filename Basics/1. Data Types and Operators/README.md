@@ -73,7 +73,6 @@ Primitive datatypes are predefined by the language and named by a keyword.
 - Default value of any reference variable is null.
 - can be used to refer any object of the declared type or any compatible type.
 - Example: Animal animal = new Animal("giraffe"); 
-- See "Objects" section for more details
 
 # Operators
 
