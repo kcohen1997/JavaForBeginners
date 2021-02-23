@@ -6,12 +6,7 @@ Welcome to Java Basics. Run App.js to see these concepts played out in a Java en
 
 Source: https://www.tutorialspoint.com/java
 
-# Defintions
-- Objects: A representation of a real world entity, like an animal or a person. An object has many characteristics that can be represented/changed inside of a class
-- Classes: the blueprint of an object. An object describes an objects behavior and/or states.
-- Methods: an operation done on an object. Getters and setters are very common examples of methods within a class, setters update a value while getters return a value 
-- Instance Variables: a variable defined in a class. Each object has its own unique set of instance variables
-- Constructor: a special method used to create objects. There are two types of constructors: default (no default values given) and parameterized (specfic default values are provided)
+
 
 # Objects, Classes and Variables
 
