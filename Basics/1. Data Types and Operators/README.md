@@ -1,7 +1,6 @@
-# Java Basics
+# Data Types and Operators
 
-Welcome to Java Basics. Here we will be discussing data types, objects, and loops.
-Run App.js to see examples
+Welcome to Data Types and Operators. Run App.java to see examples
 
 Source: https://www.tutorialspoint.com/java
 
@@ -76,7 +75,72 @@ Primitive datatypes are predefined by the language and named by a keyword.
 - Example: Animal animal = new Animal("giraffe"); 
 - See "Objects" section for more details
 
-### Java Literals
+# Operators
+
+### Arithmetic Operators
+
+Arithmetic operators are used in mathematical expressions in the same way that they are used in algebra.
+
+Assume integer variable A holds 10 and variable B holds 20.
+
+| Operator  | Example |
+| ------------- | ------------- |
+| + (Addition)  | 	A + B will give 30 |
+| - (Subtraction)  | A - B will give -10  |
+| * (Multiplication)  | A * B will give 200 |
+| / (Division) | B / A will give 2  |
+| % (Modulus)  | B % A will give 0 |
+| ++ (Increment)  | B++ gives 21 |
+| -- (Decrement)  | B-- gives 19  |
+
+
+### Relational Operators
+
+Relational operators directly compare two variables.
+
+Assume integer variable A holds 10 and variable B holds 20.
+
+| Operator  | Example |
+| ------------- | ------------- |
+| == (equal to) | 	(A == B) is not true. |
+| != (not equal to)  | (A != B) is true. |
+| > (greater than)  | (A > B) is not true. |
+| < (less than) | (A < B) is true.  |
+| >= (greater than or equal to)  | (A >= B) is not true. |
+| <= (less than or equal to) | (A <= B) is true. |
+
+
+### Bitwise Operators
+
+Java defines several bitwise operators, which can be applied to the integer types, long, int, short, char, and byte.
+
+Bitwise operator works on bits and performs bit-by-bit operation. Assume if a = 60 and b = 13; now in binary format they will be as follows −
+
+a = 0011 1100
+
+b = 0000 1101
+
+-----------------
+
+a&b = 0000 1100
+
+a|b = 0011 1101
+
+a^b = 0011 0001
+
+~a  = 1100 0011
+
+
+
+### Logical Operators
+
+### Assignment Operators
+
+
+### Misc Operators
+
+
+# Java Literals
 
 A literal is a source code representation of a fixed value. They are represented directly in the code without any computation.
 
@@ -109,7 +173,7 @@ String and char types of literals can contain any Unicode characters.
 
 Java language supports few special escape sequences for String and char literals as well. 
 
-| Notation  | Character represented |
+| Operator  | Example |
 | ------------- | ------------- |
 | \n  | Newline (0x0a) |
 | \r  | Carriage return (0x0d)  |
@@ -123,56 +187,11 @@ Java language supports few special escape sequences for String and char literals
 | \ddd  | Octal character (ddd)  |
 | \uxxxx  | Hexadecimal UNICODE character (xxxx)  |
 
-## Varaibles
 
-There are three types of variables.
 
-### Local Variables
-- declared in methods, constructors, or blocks
-- visible only within a declared method constructor or block
-- will be destroyed once it exits the method, constructor or block
-- access modifiers cannot be used 
-##### -implemented at a stack level internally?
-- has no default value, so they must be declared and an initial value should be assigned before first use
 
-#### Example: 
-public void printInteger(int n) {
-  System.out.println(n);
-}
 
-### Instance Variables
-- declared in a class, but outside of method, constructor or any block
-##### - When a space is allocated for an object in the heap, a slot for each instance variable value is created?
-- hold values that must be referenced by more than one method, constructor or block, or essential parts of an object's state that must be present throughout the class
-- can be declared in class level before or after use
-- access modifiers can be given for instance variables.
-- visible for all methods, constructors and block in the class. Normally, it is recommended to make these variables private (access level). However, visibility for subclasses can be given for these variables with the use of access modifiers.
-- have default values. For numbers, the default value is 0, for Booleans it is false, and for object references it is null. Values can be assigned during the declaration or within the constructor.
-- can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name.
 
-#### Examples: 
-public boolean hasLettuce;
-<br>
-private int orderNo:
-<br>
 
-#### Access Modifiers:
-- Default:	declarations are visible only within the package (package private)
-- Private:	declarations are visible within the class only
-- Protected:	declarations are visible within the package or all subclasses
-- Public:	declarations are visible everywhere
 
-### Class/Static Variables
-- are declared with the static keyword in a class, but outside a method, constructor or a block.
-- It is rare to use static variables other than declared final and used as either public or private constants
-  - Constants are variables that are declared as public/private, final, and static. Constant variables never change from their initial value)
-- are stored in the static memory
-- are created when a program starts and destroyed when the program stops
-- visibility is similar to instance variables. However, most static variables are declared public since they must be available for users of the class.
-- default values are same as instance variables. For numbers, the default value is 0; for Booleans, it is false; and for object references, it is null. Values can be assigned during the declaration or within the constructor. Additionally, values can be assigned in special static initializer blocks.
-- can be accessed by calling with the class name ClassName.VariableName.
-- when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
 
-#### Examples:
-   - private static double salary;
-   - public static final String DEPARTMENT = "Development "; // Constant
