@@ -17,14 +17,14 @@ Integer x = 5; // boxes int to an Integer object
 
 x =  x + 10;   // unboxes the Integer to a int
 
-| No.  | Method & Description |
-| ------------- | ------------- |
-| Content Cell  | xxxValue() Converts the value of this Number object to the xxx data type and returns it.  |
-| Content Cell  | compareTo() Compares this Number object to the argument. |
-| Content Cell  | equals() Determines whether this number object is equal to the argument.  |
-| Content Cell  | valueOf() Returns an Integer object holding the value of the specified primitive. |
-| Content Cell  |  toString() Returns a String object representing the value of a specified int or Integer. |
-| Content Cell  | parseInt() This method is used to get the primitive data type of a certain String. |
+|  Method & Description |
+|  ------------- |
+| xxxValue() Converts the value of this Number object to the xxx data type and returns it.  |
+|  compareTo() Compares this Number object to the argument. |
+| equals() Determines whether this number object is equal to the argument.  |
+| valueOf() Returns an Integer object holding the value of the specified primitive. |
+|   toString() Returns a String object representing the value of a specified int or Integer. |
+|  parseInt() This method is used to get the primitive data type of a certain String. |
 | Content Cell  | abs() Returns the absolute value of the argument.  |
 | Content Cell  | ceil() Returns the smallest integer that is greater than or equal to the argument. Returned as a double. |
 | Content Cell  | floor() Returns the largest integer that is less than or equal to the argument. Returned as a double. |
