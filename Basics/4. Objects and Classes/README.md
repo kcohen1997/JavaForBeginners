@@ -1,6 +1,6 @@
 # Objects and Classes
 
-Welcome to Objects and Classes. Run App.js to see the examples
+Welcome to Objects and Classes. Run App.java to see the examples
 
 Source: https://www.tutorialspoint.com/java
 
