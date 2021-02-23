@@ -143,12 +143,21 @@ Assume integer variable A holds 60 and variable B holds 13.
 | >>> (zero fill right shift) | Shift right zero fill operator. The left operands value is moved right by the number of bits specified by the right operand and shifted values are filled up with zeros. | A >>>2 will give 15 which is 0000 1111 |
 
 
-
-
-
 ### Logical Operators
 
+Assume Boolean variables A holds true and variable B holds false
+
+| Operator  |  Example |
+| ------------- | ------------- |
+| && (logical and)  | (A && B) is false | 
+| || (logical or)  | (A || B) is true | 
+| ! (logical not) |  !(A && B) is true | 
+
 ### Assignment Operators
+
+| Operator  | Description | Example |
+| ------------- | ------------- |  ------------- |
+| = | Simple assignment operator. Assigns values from right side operands to left side operand. | C = A + B will assign value of A + B into C |
 
 
 ### Misc Operators
