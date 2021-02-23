@@ -132,6 +132,10 @@ a^b = 0011 0001
 
 Assume integer variable A holds 60 and variable B holds 13.
 
+| Operator  | Description | Example |
+| ------------- | ------------- |  ------------- |
+| == (equal to) | 	(A == B) is not true. | 	(A == B) is not true. |
+
 | Operator  | Description | Example | 
 | ------------- | ------------- | | ------------- |
 | & (bitwise and)  | 	Binary AND Operator copies a bit to the result if it exists in both operands. | (A & B) will give 12 which is 0000 1100 | (A & B) will give 12 which is 0000 1100  |
