@@ -2,41 +2,41 @@
 public class HamburgerOrder {
 
     // public: variable is visible in any child class
-    public boolean lettuce;
-    public boolean tomatoes;
-    public boolean onions;
-    public boolean pickles;
-    public boolean mayo;
+    public boolean hasLettuce;
+    public boolean hasTomatoes;
+    public boolean hasOnions;
+    public boolean hasPickles;
+    public boolean hasMayo;
 
     // private: variable is visible in class only
     private int orderNo;
 
     // Default constructor for the class HamburgerOrder
     public HamburgerOrder() {
-        lettuce = true;
-        tomatoes = true;
-        onions = true;
-        pickles = true;
-        mayo = true;
+        hasLettuce = true;
+        hasTomatoes = true;
+        hasOnions = true;
+        hasPickles = true;
+        hasMayo = true;
         orderNo = 0;
     }
 
     // Parameterized constructor for the class HamburgerOrder
     public HamburgerOrder(int num, boolean l, boolean t, boolean o, boolean p, boolean m) {
-        lettuce = l;
-        tomatoes = t;
-        onions = o;
-        pickles = p;
-        mayo = m;
+        hasLettuce = l;
+        hasTomatoes = t;
+        hasOnions = o;
+        hasPickles = p;
+        hasMayo = m;
         orderNo = num;
     }
 
     public boolean getOnions() {
-        return onions;
+        return hasOnions;
     }
 
     public void setOnions(boolean b) {
-        onions = b;
+        hasOnions = b;
     }
 
     public void setOrderNo(int num) {
@@ -49,11 +49,11 @@ public class HamburgerOrder {
 
     /* Print the Hamburger details */
     public void printHamburger() {
-        System.out.println("Does it have lettuce? " + lettuce);
-        System.out.println("Does it have tomatoes? " + tomatoes);
-        System.out.println("Does it have onions? " + onions);
-        System.out.println("Does it have pickles? " + pickles);
-        System.out.println("Does it have mayo? " + mayo);
+        System.out.println("Does it have lettuce? " + hasLettuce);
+        System.out.println("Does it have tomatoes? " + hasTomatoes);
+        System.out.println("Does it have onions? " + hasOnions);
+        System.out.println("Does it have pickles? " + hasPickles);
+        System.out.println("Does it have mayo? " + hasMayo);
         System.out.println("Order No: " + orderNo);
 
     }
