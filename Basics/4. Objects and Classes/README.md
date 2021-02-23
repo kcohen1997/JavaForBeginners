@@ -4,7 +4,7 @@ Welcome to Objects and Classess. Run App.js to see the examples
 
 Source: https://www.tutorialspoint.com/java
 
-# Defintions
+## Defintions
 - Objects: A representation of a real world entity, like an animal or a person. An object has many characteristics that can be represented/changed inside of a class
 - Classes: the blueprint of an object. An object describes an objects behavior and/or states.
 - Methods: an operation done on an object. Getters and setters are very common examples of methods within a class, setters update a value while getters return a value 
