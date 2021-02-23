@@ -133,7 +133,7 @@ a^b = 0011 0001
 Assume integer variable A holds 60 and variable B holds 13.
 
 | Operator  | Description | Example | 
-| ------------- | ------------- |
+| ------------- | ------------- | | ------------- |
 | & (bitwise and)  | 	Binary AND Operator copies a bit to the result if it exists in both operands. | (A & B) will give 12 which is 0000 1100 | (A & B) will give 12 which is 0000 1100  |
 | | (bitwise or) | Binary OR Operator copies a bit if it exists in either operand. | (A | B) will give 61 which is 0011 1101 |  (A | B) will give 61 which is 0011 1101 |
 | ^ (bitwise XOR) | Binary XOR Operator copies the bit if it is set in one operand but not both. | (A ^ B) will give 49 which is 0011 0001 | 
