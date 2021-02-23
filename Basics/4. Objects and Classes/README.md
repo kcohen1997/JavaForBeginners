@@ -11,7 +11,7 @@ Source: https://www.tutorialspoint.com/java
 - Instance Variables: a variable defined in a class. Each object has its own unique set of instance variables
 - Constructor: a special method used to create objects. There are two types of constructors: default (no default values given) and parameterized (specfic default values are provided)
 
-## Varaibles
+## Variables
 
 There are three types of variables.
 
