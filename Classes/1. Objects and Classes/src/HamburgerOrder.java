@@ -13,22 +13,22 @@ public class HamburgerOrder {
 
     // Default constructor for the class HamburgerOrder
     public HamburgerOrder() {
-        hasLettuce = true;
-        hasTomatoes = true;
-        hasOnions = true;
-        hasPickles = true;
-        hasMayo = true;
-        orderNo = 0;
+        this.hasLettuce = true;
+        this.hasTomatoes = true;
+        this.hasOnions = true;
+        this.hasPickles = true;
+        this.hasMayo = true;
+        this.orderNo = 0;
     }
 
     // Parameterized constructor for the class HamburgerOrder
     public HamburgerOrder(int num, boolean l, boolean t, boolean o, boolean p, boolean m) {
-        hasLettuce = l;
-        hasTomatoes = t;
-        hasOnions = o;
-        hasPickles = p;
-        hasMayo = m;
-        orderNo = num;
+        this.hasLettuce = l;
+        this.hasTomatoes = t;
+        this.hasOnions = o;
+        this.hasPickles = p;
+        this.hasMayo = m;
+        this.orderNo = num;
     }
 
     public boolean getOnions() {
@@ -47,14 +47,15 @@ public class HamburgerOrder {
         return orderNo;
     }
 
-    /* Print the Hamburger details */
-    public void printHamburger() {
+    /* Print the Hamburger order details */
+    public void printOrder() {
         System.out.println("Does it have lettuce? " + hasLettuce);
         System.out.println("Does it have tomatoes? " + hasTomatoes);
         System.out.println("Does it have onions? " + hasOnions);
         System.out.println("Does it have pickles? " + hasPickles);
         System.out.println("Does it have mayo? " + hasMayo);
         System.out.println("Order No: " + orderNo);
+        System.out.println();
 
     }
 }
