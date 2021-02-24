@@ -1,190 +1,146 @@
-# Data Types and Operators
+# Regular Expressions
 
-Welcome to Data Types and Operators. Run App.java to see examples
+Welcome to Regular Expressions. Run App.java to see examples
 
 Source: https://www.tutorialspoint.com/java
 
-# Data Types
+Java provides the java.util.regex package for pattern matching with regular expressions. Java regular expressions are very similar to the Perl programming language and very easy to learn.
 
-### Primitive Data Types
+A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. They can be used to search, edit, or manipulate text and data.
 
-Primitive datatypes are predefined by the language and named by a keyword.
+The java.util.regex package primarily consists of the following three classes:
 
-##### byte
-- data type an 8-bit signed two's complement integer
-- minimum value is -128 (-2^7), maximum value is 127 (inclusive)(2^7 -1)
-- default value is 0
-- byte data type is used to save space in large arrays, mainly in place of integers, since a byte is four times smaller than an integer.
-- Example: byte a = 100, byte b = -50
+- Pattern Class: A Pattern object is a compiled representation of a regular expression. The Pattern class provides no public constructors. To create a pattern, you must first invoke one of its public static compile() methods, which will then return a Pattern object. These methods accept a regular expression as the first argument.
 
-##### short
-- data type is a 16-bit signed two's complement integer
-- minimum value is -128 -32,768 (-2^15), maximum value is 32,767 (inclusive) (2^15 -1)
-- default value is 0
-- can also be used to save memory as byte data type. 
-- 2 times smaller than an integer
-- example: short s = 10000, short r = -20000
+- Matcher Class: A Matcher object is the engine that interprets the pattern and performs match operations against an input string. Like the Pattern class, Matcher defines no public constructors. You obtain a Matcher object by invoking the matcher() method on a Pattern object.
 
-##### int
-- data type is a 32-bit signed two's complement integer.
-- minimum value is - 2,147,483,648 (-2^31), maximum value is 2,147,483,647(inclusive) (2^31 -1)
-- is generally used as the default data type for integral values unless there is a concern about memory.
-- default value is 0
-- Example: int a = 100000, int b = -200000
+- PatternSyntaxException: A PatternSyntaxException object is an unchecked exception that indicates a syntax error in a regular expression pattern.
 
-##### long
-- data type is a 64-bit signed two's complement integer
-- minimum value is -9,223,372,036,854,775,808(-2^63), maximum value is 9,223,372,036,854,775,807 (inclusive)(2^63 -1)
-- used when a wider range than int is needed
-- Default value is 0L
-- Example: long a = 100000L, long b = -200000L
+### Capturing Groups
 
-##### float
-- data type is a single-precision 32-bit IEEE 754 floating point
-- mainly used to save memory in large arrays of floating point numbers
-- default value is 0.0f
-- data type is never used for precise values such as currency
-- float f1 = 234.5f
+Capturing groups are a way to treat multiple characters as a single unit. They are created by placing the characters to be grouped inside a set of parentheses. For example, the regular expression (dog) creates a single group containing the letters "d", "o", and "g".
 
-##### double
-- data type is a double-precision 64-bit IEEE 754 floating point
-- data type is generally used as the default data type for decimal values, generally the default choice
-- data type should never be used for precise values such as currency
-- default value is 0.0d
-- example: double d1 = 123.4
+Capturing groups are numbered by counting their opening parentheses from the left to the right. In the expression ((A)(B(C))), for example, there are four such groups −
 
-##### boolean
-- data type represents one bit of information. There are only two possible values: true and false
-- data type is used for simple flags that track true/false conditions
-- Default value is false
-- Example: boolean one = true
+((A)(B(C)))
+(A)
+(B(C))
+(C)
+To find out how many groups are present in the expression, call the groupCount method on a matcher object. The groupCount method returns an int showing the number of capturing groups present in the matcher's pattern.
 
-##### char
-- char data type is a single 16-bit Unicode character
-- minimum value is '\u0000' (or 0)
-- maximum value is '\uffff' (or 65,535 inclusive)
-- char data type is used to store any character
-- Example: char letterA = 'A'
+There is also a special group, group 0, which always represents the entire expression. This group is not included in the total reported by groupCount.
 
-### Reference Datatypes
+#### View Example 1
 
-- are created using defined constructors of the classes. They are used to access objects. These variables are declared to be of a specific type that cannot be changed. For example, Employee, Puppy, etc.
-- Class objects and various type of array variables come under reference datatype.
-- Default value of any reference variable is null.
-- can be used to refer any object of the declared type or any compatible type.
-- Example: Animal animal = new Animal("giraffe"); 
+### Regular Expression Syntax
 
-# Operators
+Here is the table listing down all the regular expression metacharacter syntax available in Java
 
-### Arithmetic Operators
-
-Arithmetic operators are used in mathematical expressions in the same way that they are used in algebra.
-
-Assume integer variable A holds 10 and variable B holds 20.
-
-| Operator  | Example |
+| Subexpression  | Matches |
 | ------------- | ------------- |
-| + (Addition)  | 	A + B will give 30 |
-| - (Subtraction)  | A - B will give -10  |
-| * (Multiplication)  | A * B will give 200 |
-| / (Division) | B / A will give 2  |
-| % (Modulus)  | B % A will give 0 |
-| ++ (Increment)  | B++ gives 21 |
-| -- (Decrement)  | B-- gives 19  |
+| ^ | Matches the beginning of the line.  |
+| $  | 	Matches the end of the line. |
+| ' | Matches any single character except newline. Using m option allows it to match the newline as well. |
+| [...]  | Matches any single character in brackets. |
+| [^...] | Matches any single character not in brackets. |
+| \A | Beginning of the entire string. |
+| \z | End of the entire string. |
+| \Z | End of the entire string except allowable final line terminator. |
+| re* |  Matches 0 or more occurrences of the preceding expression. |
+| re+ | Matches 1 or more of the previous thing. |
+| re? |  Matches 0 or 1 occurrence of the preceding expression. |
+| re{n} | 	Matches exactly n number of occurrences of the preceding expression. |
+| re{ n, m} | Matches at least n and at most m occurrences of the preceding expression. |
+| a\| b  | Matches either a or b. |
+| (re) | 	Groups regular expressions and remembers the matched text. |
+| (?: re) | Groups regular expressions without remembering the matched text. |
+| (?> re) | Matches the independent pattern without backtracking. |
+| \w | Matches the word characters. |
+| \W | Matches the nonword characters. |
+| \s | Matches the whitespace. Equivalent to [\t\n\r\f]. |
+| \S | Matches the nonwhitespace. |
+| \d | Matches the digits. Equivalent to [0-9]. |
+| \D  | 	Matches the nondigits. |
+| \A | Matches the beginning of the string. |
+| \Z  | Matches the end of the string. If a newline exists, it matches just before newline. |
+| \z | 	Matches the end of the string. |
+| \G | 	Matches the point where the last match finished. |
+| \n | Back-reference to capture group number "n". |
+| \b | Matches the word boundaries when outside the brackets. Matches the backspace (0x08) when inside the brackets. |
+| \B | 	Matches the nonword boundaries. |
+| \n, \t, etc. | Matches newlines, carriage returns, tabs, etc. |
+| \Q | Escape (quote) all characters up to \E. |
+| \E | Ends quoting begun with \Q. |
 
+### Methods of the Matcher Class
 
-### Relational Operators
+Index Methods
+Index methods provide useful index values that show precisely where the match was found in the input string −
 
-Relational operators directly compare two variables.
-
-Assume integer variable A holds 10 and variable B holds 20.
-
-| Operator  | Example |
+| Subexpression  | Matches |
 | ------------- | ------------- |
-| == (equal to) | 	(A == B) is not true. |
-| != (not equal to)  | (A != B) is true. |
-| > (greater than)  | (A > B) is not true. |
-| < (less than) | (A < B) is true.  |
-| >= (greater than or equal to)  | (A >= B) is not true. |
-| <= (less than or equal to) | (A <= B) is true. |
+| public int start() | Returns the start index of the previous match. |
+| public int start(int group) | Returns the start index of the subsequence captured by the given group during the previous match operation.  |
+| public int end() | Returns the offset after the last character matched. |
+| public int end(int group)  |  Returns the offset after the last character of the subsequence captured by the given group during the previous match operation.|
 
+Study Methods
+Study methods review the input string and return a Boolean indicating whether or not the pattern is found
 
-### Bitwise Operators
-
-Java defines several bitwise operators, which can be applied to the integer types, long, int, short, char, and byte.
-
-Bitwise operator works on bits and performs bit-by-bit operation. Assume if a = 60 and b = 13; now in binary format they will be as follows:
-
-a = 0011 1100
-
-b = 0000 1101
-
------------------
-
-a&b = 0000 1100
-
-a|b = 0011 1101
-
-a^b = 0011 0001
-
-~a  = 1100 0011
-
-Assume integer variable A holds 60 and variable B holds 13.
-
-| Operator  | Description | Example |
-| ------------- | ------------- |  ------------- |
-| & (bitwise and)  | 	Binary AND Operator copies a bit to the result if it exists in both operands. | (A & B) will give 12 which is 0000 1100 | (A & B) will give 12 which is 0000 1100  |
- | \| (bitwise or) | Binary OR Operator copies a bit if it exists in either operand. | (A \| B) will give 61 which is 0011 1101 |
-| ^ (bitwise XOR) | Binary XOR Operator copies the bit if it is set in one operand but not both. | (A ^ B) will give 49 which is 0011 0001 | 
-| ~ (bitwise compliment) | Binary Ones Complement Operator is unary and has the effect of 'flipping' bits. | (~A ) will give -61 which is 1100 0011 in 2's complement form due to a signed binary number. |
-| << (left shift) | Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand. | A << 2 will give 240 which is 1111 0000 |
-| >> (right shift) | Binary Right Shift Operator. The left operands value is moved right by the number of bits specified by the right operand.  | A >> 2 will give 15 which is 1111 |
-| >>> (zero fill right shift) | Shift right zero fill operator. The left operands value is moved right by the number of bits specified by the right operand and shifted values are filled up with zeros. | A >>>2 will give 15 which is 0000 1111 |
-
-
-### Logical Operators
-
-Assume Boolean variables A holds true and variable B holds false
-
-| Operator  |  Example |
+| Subexpression  | Matches |
 | ------------- | ------------- |
-| && (logical and)  | (A && B) is false | 
-| \|\| (logical or)  | (A \|\| B) is true | 
-| ! (logical not) |  !(A && B) is true | 
+| public boolean lookingAt() | Attempts to match the input sequence, starting at the beginning of the region, against the pattern. |
+| public boolean find()|  Attempts to find the next subsequence of the input sequence that matches the pattern. |
+| public boolean find(int start) | Resets this matcher and then attempts to find the next subsequence of the input sequence that matches the pattern, starting at the specified index. |
+| public boolean matches() | Attempts to match the entire region against the pattern. |
 
-### Assignment Operators
+Replacement Methods
+Replacement methods are useful methods for replacing text in an input string.
 
-| Operator  | Description | Example |
-| ------------- | ------------- |  ------------- |
-| = | Simple assignment operator. Assigns values from right side operands to left side operand. | C = A + B will assign value of A + B into C | C = A + B will assign value of A + B into C |
-| += | Add AND assignment operator. It adds right operand to the left operand and assign the result to left operand. | C += A is equivalent to C = C + A |
-| -= | Subtract AND assignment operator. It subtracts right operand from the left operand and assign the result to left operand. | C -= A is equivalent to C = C – A |
-| *= | Multiply AND assignment operator. It multiplies right operand with the left operand and assign the result to left operand. | C *= A is equivalent to C = C * A |
-| /= | Divide AND assignment operator. It divides left operand with the right operand and assign the result to left operand. | C /= A is equivalent to C = C / A |
-| %= | Modulus AND assignment operator. It takes modulus using two operands and assign the result to left operand. | C %= A is equivalent to C = C % A |
-| <<= | Left shift AND assignment operator. | C <<= 2 is same as C = C << 2 |
-| >>= | Right shift AND assignment operator. | C >>= 2 is same as C = C >> 2 |
-| &= | 	Bitwise AND assignment operator. | C &= 2 is same as C = C & 2 |
-| ^= | bitwise exclusive OR and assignment operator. | C ^= 2 is same as C = C ^ 2 |
-| \|= | bitwise inclusive OR and assignment operator. | C \|= 2 is same as C = C \| 2 |
+| Subexpression  | Matches |
+| ------------- | ------------- |
+| public Matcher appendReplacement(StringBuffer sb, String replacement) | Implements a non-terminal append-and-replace step. |
+| public StringBuffer appendTail(StringBuffer sb) | Implements a terminal append-and-replace step. |
+| public String replaceAll(String replacement) | Replaces every subsequence of the input sequence that matches the pattern with the given replacement string. |
+| public String replaceFirst(String replacement) | Replaces the first subsequence of the input sequence that matches the pattern with the given replacement string. |
+| public static String quoteReplacement(String s) | Returns a literal replacement String for the specified String. This method produces a String that will work as a literal replacement s in the appendReplacement method of the Matcher class. |
 
+### The start and end Methods
+Following is the example that counts the number of times the word "cat" appears in the input string 
 
-### Misc Operators
+You can see that this example uses word boundaries to ensure that the letters "c" "a" "t" are not merely a substring in a longer word. It also gives some useful information about where in the input string the match has occurred.
 
-##### Conditional Operator (? : )
+The start method returns the start index of the subsequence captured by the given group during the previous match operation, and the end returns the index of the last character matched, plus one.
 
-Conditional operator is also known as the ternary operator. This operator consists of three operands and is used to evaluate Boolean expressions. The goal of the operator is to decide, which value should be assigned to the variable.
+### The matches and lookingAt Methods
+The matches and lookingAt methods both attempt to match an input sequence against a pattern. The difference, however, is that matches requires the entire input sequence to be matched, while lookingAt does not.
 
-variable x = (expression) ? value if true : value if false
+Both methods always start at the beginning of the input string. Here is the example explaining the functionality −
 
-##### instanceof Operator
+#### View Example 2
 
-This operator is used only for object reference variables. The operator checks whether the object is of a particular type (class type or interface type).
+### The replaceFirst and replaceAll Methods
 
-##### Example:
- String name = "James";
- boolean result = name instanceof String;
+The replaceFirst and replaceAll methods replace the text that matches a given regular expression. As their names indicate, replaceFirst replaces the first occurrence, and replaceAll replaces all occurrences.
 
+#### View Example 3
+
+### The appendReplacement and appendTail Methods
+
+The Matcher class also provides appendReplacement and appendTail methods for text replacement.
+
+#### View Example 4
+
+### PatternSyntaxException Class Methods
+
+A PatternSyntaxException is an unchecked exception that indicates a syntax error in a regular expression pattern. The PatternSyntaxException class provides the following methods to help you determine what went wrong
+
+| No. | Method & Description |
+| ------------- | ------------- |
+| public String getDescription() | Retrieves the description of the error. |
+| public int getIndex() | Retrieves the error index. |
+| public String getPattern() | Retrieves the erroneous regular expression pattern. |
+| public String getMessage() | Returns a multi-line string containing the description of the syntax error and its index, the erroneous regular expression pattern, and a visual indication of the error index within the pattern. |
 
 
 
