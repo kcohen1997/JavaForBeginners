@@ -105,7 +105,7 @@ Replacement methods are useful methods for replacing text in an input string.
 | public String replaceFirst(String replacement) | Replaces the first subsequence of the input sequence that matches the pattern with the given replacement string. |
 | public static String quoteReplacement(String s) | Returns a literal replacement String for the specified String. This method produces a String that will work as a literal replacement s in the appendReplacement method of the Matcher class. |
 
-### The Start and End Methods
+### The start and end Methods
 Following is the example that counts the number of times the word "cat" appears in the input string 
 
 You can see that this example uses word boundaries to ensure that the letters "c" "a" "t" are not merely a substring in a longer word. It also gives some useful information about where in the input string the match has occurred.
@@ -131,11 +131,7 @@ The Matcher class also provides appendReplacement and appendTail methods for tex
 
 #### View Example 4
 
-### The appendReplacement and appendTail Methods
-
-#### View Example 5
-
-PatternSyntaxException Class Methods
+### PatternSyntaxException Class Methods
 
 A PatternSyntaxException is an unchecked exception that indicates a syntax error in a regular expression pattern. The PatternSyntaxException class provides the following methods to help you determine what went wrong
 
