@@ -1,6 +1,4 @@
-# JavaForBeginners
-
-# Java Basics
+# Java For Beginners
 
 Welcome to Java Basics
 
