@@ -131,6 +131,11 @@ The newline character (\n) has been used frequently in this tutorial in System.o
 
 # Arrays
 
+Example:
+double[] myList = new double[10];
+
+Length: myList.length;
+
 |  Method | Description |
 |  ------------- |  ------------- |
 | public static int binarySearch(Object[] a, Object key) |  Searches the specified array of Object ( Byte, Int , double, etc.) for the specified value using the binary search algorithm. The array must be sorted prior to making this call. This returns index of the search key, if it is contained in the list; otherwise, it returns ( – (insertion point + 1)). |
