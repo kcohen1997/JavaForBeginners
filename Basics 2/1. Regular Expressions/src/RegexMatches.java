@@ -4,14 +4,19 @@ import java.util.regex.Pattern;
 public class RegexMatches {
 
     public void printAll() {
+        System.out.println("EXAMPLE 1");
         RegexExample1();
         System.out.println();
+        System.out.println("EXAMPLE 2");
         RegexExample2();
         System.out.println();
+        System.out.println("EXAMPLE 3");
         RegexExample3();
         System.out.println();
+        System.out.println("EXAMPLE 4");
         RegexExample4();
         System.out.println();
+        System.out.println("EXAMPLE 5");
         RegexExample5();
         System.out.println();
     }
