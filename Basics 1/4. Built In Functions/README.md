@@ -1,178 +1,147 @@
 # Java Basics
 
-Welcome to Java Basics. Here we will be discussing data types, objects, and loops.
+Welcome to Built In Functions. Here we will be showing built-in functions for Numbers characters, strings, and arrays 
 Run App.js to see examples
 
 Source: https://www.tutorialspoint.com/java
 
-# Data Types
+# Numbers
 
-### Primitive Data Types
+Normally, when we work with Numbers, we use primitive data types such as byte, int, long, double, etc.
 
-Primitive datatypes are predefined by the language and named by a keyword.
+However, in development, we come across situations where we need to use objects instead of primitive data types. In order to achieve this, Java provides wrapper classes.
 
-##### byte
-- data type an 8-bit signed two's complement integer
-- minimum value is -128 (-2^7), maximum value is 127 (inclusive)(2^7 -1)
-- default value is 0
-- byte data type is used to save space in large arrays, mainly in place of integers, since a byte is four times smaller than an integer.
-- Example: byte a = 100, byte b = -50
+All the wrapper classes (Integer, Long, Byte, Double, Float, Short) are subclasses of the abstract class Number.
 
-##### short
-- data type is a 16-bit signed two's complement integer
-- minimum value is -128 -32,768 (-2^15), maximum value is 32,767 (inclusive) (2^15 -1)
-- default value is 0
-- can also be used to save memory as byte data type. 
-- 2 times smaller than an integer
-- example: short s = 10000, short r = -20000
+Integer x = 5; // boxes int to an Integer object
 
-##### int
-- data type is a 32-bit signed two's complement integer.
-- minimum value is - 2,147,483,648 (-2^31), maximum value is 2,147,483,647(inclusive) (2^31 -1)
-- is generally used as the default data type for integral values unless there is a concern about memory.
-- default value is 0
-- Example: int a = 100000, int b = -200000
+x =  x + 10;   // unboxes the Integer to a int
 
-##### long
-- data type is a 64-bit signed two's complement integer
-- minimum value is -9,223,372,036,854,775,808(-2^63), maximum value is 9,223,372,036,854,775,807 (inclusive)(2^63 -1)
-- used when a wider range than int is needed
-- Default value is 0L
-- Example: long a = 100000L, long b = -200000L
-
-##### float
-- data type is a single-precision 32-bit IEEE 754 floating point
-- mainly used to save memory in large arrays of floating point numbers
-- default value is 0.0f
-- data type is never used for precise values such as currency
-- float f1 = 234.5f
-
-##### double
-- data type is a double-precision 64-bit IEEE 754 floating point
-- data type is generally used as the default data type for decimal values, generally the default choice
-- data type should never be used for precise values such as currency
-- default value is 0.0d
-- example: double d1 = 123.4
-
-##### boolean
-- data type represents one bit of information. There are only two possible values: true and false
-- data type is used for simple flags that track true/false conditions
-- Default value is false
-- Example: boolean one = true
-
-##### char
-- char data type is a single 16-bit Unicode character
-- minimum value is '\u0000' (or 0)
-- maximum value is '\uffff' (or 65,535 inclusive)
-- char data type is used to store any character
-- Example: char letterA = 'A'
-
-### Reference Datatypes
-
-- are created using defined constructors of the classes. They are used to access objects. These variables are declared to be of a specific type that cannot be changed. For example, Employee, Puppy, etc.
-- Class objects and various type of array variables come under reference datatype.
-- Default value of any reference variable is null.
-- can be used to refer any object of the declared type or any compatible type.
-- Example: Animal animal = new Animal("giraffe"); 
-- See "Objects" section for more details
-
-### Java Literals
-
-A literal is a source code representation of a fixed value. They are represented directly in the code without any computation.
-
-Literals can be assigned to any primitive type variable. 
+|  Method | Description |
+|  ------------- |  ------------- |
+| xxxValue() | Converts the value of this Number object to the xxx data type and returns it.  |
+|  compareTo() | Compares this Number object to the argument. |
+| equals() | Determines whether this number object is equal to the argument.  |
+| valueOf() | Returns an Integer object holding the value of the specified primitive. |
+|   toString() | Returns a String object representing the value of a specified int or Integer. |
+|  parseInt() | This method is used to get the primitive data type of a certain String. |
+| abs()  |  Returns the absolute value of the argument.  |
+| ceil()  |  Returns the smallest integer that is greater than or equal to the argument. Returned as a double. |
+| floor()  |  Returns the largest integer that is less than or equal to the argument. Returned as a double. |
+| rint()   | Returns the integer that is closest in value to the argument. Returned as a double. |
+| round()  |  Returns the closest long or int, as indicated by the method's return type to the argument. |
+| min()  |  Returns the smaller of the two arguments.  |
+| max()  | Returns the larger of the two arguments. |
+| exp()  |  Returns the base of the natural logarithms, e, to the power of the argument. |
+| log()  |  Returns the natural logarithm of the argument. |
+| pow()  | Returns the value of the first argument raised to the power of the second argument.|
+|  sqrt() | Returns the square root of the argument.  |
+|  sin()  | Returns the sine of the specified double value. |
+| cos()  |  Returns the cosine of the specified double value. |
+|  tan()  | Returns the tangent of the specified double value. |
+| asin()  |  Returns the arcsine of the specified double value. |
+| acos()  |  Returns the arccosine of the specified double value. |
+|  atan()   |Returns the arctangent of the specified double value. |
+| atan2() |  Converts rectangular coordinates (x, y) to polar coordinate (r, theta) and returns theta. |
+| toDegrees()  |  Converts the argument to degrees. |
+| toRadians()  |  Converts the argument to radians. |
+| random()  |  Returns a random number. |
 
 
-##### Examples:
-- byte a = 68;
-- char a = 'A';
+# Characters
 
-byte, int, long, and short can be expressed in decimal(base 10), hexadecimal(base 16) or octal(base 8) number systems as well. Prefix 0 is used to indicate octal, and prefix 0x indicates hexadecimal when using these number systems for literals. 
+## Escape Sequences
 
-##### Examples:
-- int decimal = 100;
-- int octal = 0144;
-- int hexa =  0x64;
+A character preceded by a backslash (\) is an escape sequence and has a special meaning to the compiler.
 
-String literals in Java are specified like they are in most other languages by enclosing a sequence of characters between a pair of double quotes. 
+The newline character (\n) has been used frequently in this tutorial in System.out.println() statements to advance to the next line after the string is printed.
 
-##### Examples:
-- "Hello World"
-- "two\nlines"
-- "\"This is in quotes\""
+|  Escape Sequence | Description |
+| \t  | 	Inserts a tab in the text at this point.  |
+| \b  |  	Inserts a backspace in the text at this point. |
+| \n  |  	Inserts a backspace in the text at this point. |
+| \r  | Inserts a carriage return in the text at this point. |
+| \f  | Inserts a form feed in the text at this point.  |
+| \'  | Inserts a single quote character in the text at this point.  |
+| \"  | Inserts a double quote character in the text at this point.  |
+| \\  |  Inserts a backslash character in the text at this point. |
 
-String and char types of literals can contain any Unicode characters. 
+## Character Methods
 
-##### Examples:
-- char a = '\u0001';
-- String a = "\u0001";
+|  Method | Description |
+|  ------------- |  ------------- |
+| 	isLetter() | Determines whether the specified char value is a letter. |
+| isDigit()	| Determines whether the specified char value is a digit. |
+| 	isWhitespace()	|  Determines whether the specified char value is white space. |
+| 		isUpperCase() | Determines whether the specified char value is uppercase. |
+| 	isLowerCase()	|  Determines whether the specified char value is lowercase. |
+| toUpperCase()	|  Returns the uppercase form of the specified char value. |
+| toLowerCase()	| Returns the lowercase form of the specified char value. |
+| 	toString()	| Returns a String object representing the specified character value that is, a one-character string. |
 
-Java language supports few special escape sequences for String and char literals as well. 
 
-| Notation  | Character represented |
-| ------------- | ------------- |
-| \n  | Newline (0x0a) |
-| \r  | Carriage return (0x0d)  |
-| \f  | Formfeed (0x0c) |
-| \b | Backspace (0x08)  |
-| \s  | Space (0x20)  |
-| \t  | tab |
-| \"  | Double quote  |
-| \'  | Single quote |
-| \\  | backslash  |
-| \ddd  | Octal character (ddd)  |
-| \uxxxx  | Hexadecimal UNICODE character (xxxx)  |
+# Strings
 
-## Varaibles
+|  Method | Description |
+|  ------------- |  ------------- |
+| char charAt(int index) | Returns the character at the specified index. |
+| int compareTo(Object o) | Compares this String to another Object. |
+| int compareTo(String anotherString) | Compares two strings lexicographically. |
+| int compareToIgnoreCase(String str) | Compares two strings lexicographically, ignoring case differences. |
+| String concat(String str) | Concatenates the specified string to the end of this string. |
+| boolean contentEquals(StringBuffer sb) | Returns true if and only if this String represents the same sequence of characters as the specified StringBuffer. |
+| static String copyValueOf(char[] data) | Returns a String that represents the character sequence in the array specified. |
+| static String copyValueOf(char[] data, int offset, int count) | Returns a String that represents the character sequence in the array specified. |
+| boolean endsWith(String suffix) | Tests if this string ends with the specified suffix. |
+| boolean equals(Object anObject) | Compares this string to the specified object. |
+| boolean equalsIgnoreCase(String anotherString) | Compares this String to another String, ignoring case considerations. |
+| byte[] getBytes() | Encodes this String into a sequence of bytes using the platform's default charset, storing the result into a new byte array. |
+| byte[] getBytes(String charsetName) | Encodes this String into a sequence of bytes using the named charset, storing the result into a new byte array. |
+| void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin) | Copies characters from this string into the destination character array. |
+| int hashCode() | Returns a hash code for this string. |
+| int indexOf(int ch) | Returns the index within this string of the first occurrence of the specified character. |
+| int indexOf(int ch, int fromIndex) | Returns the index within this string of the first occurrence of the specified character, starting the search at the specified index. |
+| String intern()  | Returns a canonical representation for the string object.|
+| int lastIndexOf(int ch) | Returns the index within this string of the last occurrence of the specified character. |
+| int lastIndexOf(int ch, int fromIndex) | Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index. |
+| int lastIndexOf(String str) | Returns the index within this string of the rightmost occurrence of the specified substring. |
+| int lastIndexOf(String str, int fromIndex) | Returns the index within this string of the last occurrence of the specified substring, searching backward starting at the specified index. |
+| int length() | Returns the length of this string. |
+| boolean matches(String regex) | Tells whether or not this string matches the given regular expression. |
+| boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len) | Tests if two string regions are equal. |
+| boolean regionMatches(int toffset, String other, int ooffset, int len) | Tests if two string regions are equal.|
+| String replace(char oldChar, char newChar) | Returns a new string resulting from replacing all occurrences of oldChar in this string with newChar.|
+| String replaceAll(String regex, String replacement | Replaces each substring of this string that matches the given regular expression with the given replacement.|
+|  String replaceFirst(String regex, String replacement) | Replaces the first substring of this string that matches the given regular expression with the given replacement. |
+| String[] split(String regex) | Splits this string around matches of the given regular expression. |
+| String[] split(String regex, int limit) | Splits this string around matches of the given regular expression. |
+| boolean startsWith(String prefix) | Tests if this string starts with the specified prefix. |
+| boolean startsWith(String prefix, int toffset) | Tests if this string starts with the specified prefix beginning a specified index. |
+| CharSequence subSequence(int beginIndex, int endIndex) | Returns a new character sequence that is a subsequence of this sequence.|
+| String substring(int beginIndex) | Returns a new string that is a substring of this string. |
+| String substring(int beginIndex, int endIndex) | Returns a new string that is a substring of this string. |
+| char[] toCharArray() | Converts this string to a new character array. |
+| String toLowerCase() | Converts all of the characters in this String to lower case using the rules of the default locale. |
+| String toLowerCase(Locale locale) | Converts all of the characters in this String to lower case using the rules of the given Locale. |
+| String toString() | This object (which is already a string!) is itself returned. |
+| String toUpperCase() | Converts all of the characters in this String to upper case using the rules of the default locale. |
+| String toUpperCase(Locale locale) | Converts all of the characters in this String to upper case using the rules of the given Locale. |
+| String trim() | Returns a copy of the string, with leading and trailing whitespace omitted. |
+| static String valueOf(primitive data type x) | Returns the string representation of the passed data type argument. |
 
-There are three types of variables.
+# Arrays
 
-### Local Variables
-- declared in methods, constructors, or blocks
-- visible only within a declared method constructor or block
-- will be destroyed once it exits the method, constructor or block
-- access modifiers cannot be used 
-##### -implemented at a stack level internally?
-- has no default value, so they must be declared and an initial value should be assigned before first use
+Example:
+double[] myList = new double[10];
 
-#### Example: 
-public void printInteger(int n) {
-  System.out.println(n);
-}
+Length: myList.length;
 
-### Instance Variables
-- declared in a class, but outside of method, constructor or any block
-##### - When a space is allocated for an object in the heap, a slot for each instance variable value is created?
-- hold values that must be referenced by more than one method, constructor or block, or essential parts of an object's state that must be present throughout the class
-- can be declared in class level before or after use
-- access modifiers can be given for instance variables.
-- visible for all methods, constructors and block in the class. Normally, it is recommended to make these variables private (access level). However, visibility for subclasses can be given for these variables with the use of access modifiers.
-- have default values. For numbers, the default value is 0, for Booleans it is false, and for object references it is null. Values can be assigned during the declaration or within the constructor.
-- can be accessed directly by calling the variable name inside the class. However, within static methods (when instance variables are given accessibility), they should be called using the fully qualified name.
+|  Method | Description |
+|  ------------- |  ------------- |
+| public static int binarySearch(Object[] a, Object key) |  Searches the specified array of Object ( Byte, Int , double, etc.) for the specified value using the binary search algorithm. The array must be sorted prior to making this call. This returns index of the search key, if it is contained in the list; otherwise, it returns ( – (insertion point + 1)). |
+| public static boolean equals(long[] a, long[] a2) | Returns true if the two specified arrays of longs are equal to one another. Two arrays are considered equal if both arrays contain the same number of elements, and all corresponding pairs of elements in the two arrays are equal. This returns true if the two arrays are equal. Same method could be used by all other primitive data types (Byte, short, Int, etc.) |
+| public static void fill(int[] a, int val) | Assigns the specified int value to each element of the specified array of ints. The same method could be used by all other primitive data types (Byte, short, Int, etc.) |
+| public static void sort(Object[] a) | Sorts the specified array of objects into an ascending order, according to the natural ordering of its elements. The same method could be used by all other primitive data types ( Byte, short, Int, etc.) |
 
-#### Examples: 
-public boolean hasLettuce;
-<br>
-private int orderNo:
-<br>
 
-#### Access Modifiers:
-- Default:	declarations are visible only within the package (package private)
-- Private:	declarations are visible within the class only
-- Protected:	declarations are visible within the package or all subclasses
-- Public:	declarations are visible everywhere
 
-### Class/Static Variables
-- are declared with the static keyword in a class, but outside a method, constructor or a block.
-- It is rare to use static variables other than declared final and used as either public or private constants
-  - Constants are variables that are declared as public/private, final, and static. Constant variables never change from their initial value)
-- are stored in the static memory
-- are created when a program starts and destroyed when the program stops
-- visibility is similar to instance variables. However, most static variables are declared public since they must be available for users of the class.
-- default values are same as instance variables. For numbers, the default value is 0; for Booleans, it is false; and for object references, it is null. Values can be assigned during the declaration or within the constructor. Additionally, values can be assigned in special static initializer blocks.
-- can be accessed by calling with the class name ClassName.VariableName.
-- when declaring class variables as public static final, then variable names (constants) are all in upper case. If the static variables are not public and final, the naming syntax is the same as instance and local variables.
-
-#### Examples:
-   - private static double salary;
-   - public static final String DEPARTMENT = "Development "; // Constant
