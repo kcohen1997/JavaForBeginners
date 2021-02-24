@@ -4,10 +4,6 @@ Welcome to Regular Expressions. Run App.java to see examples
 
 Source: https://www.tutorialspoint.com/java
 
-# Data Types
-
-### Primitive Data Types
-
 Java provides the java.util.regex package for pattern matching with regular expressions. Java regular expressions are very similar to the Perl programming language and very easy to learn.
 
 A regular expression is a special sequence of characters that helps you match or find other strings or sets of strings, using a specialized syntax held in a pattern. They can be used to search, edit, or manipulate text and data.
@@ -34,7 +30,11 @@ To find out how many groups are present in the expression, call the groupCount m
 
 There is also a special group, group 0, which always represents the entire expression. This group is not included in the total reported by groupCount.
 
-(View Example 1)
+#### View Example 1
+
+### Regular Expression Syntax
+
+Here is the table listing down all the regular expression metacharacter syntax available in Java
 
 | Subexpression  | Matches |
 | ------------- | ------------- |
@@ -72,15 +72,79 @@ There is also a special group, group 0, which always represents the entire expre
 | \Q | Escape (quote) all characters up to \E. |
 | \E | Ends quoting begun with \Q. |
 
+### Methods of the Matcher Class
 
-### Regular Expression Syntax
+Index Methods
+Index methods provide useful index values that show precisely where the match was found in the input string −
 
-Here is the table listing down all the regular expression metacharacter syntax available in Java −
+| Subexpression  | Matches |
+| ------------- | ------------- |
+| public int start() | Returns the start index of the previous match. |
+| public int start(int group) | Returns the start index of the subsequence captured by the given group during the previous match operation.  |
+| public int end() | Returns the offset after the last character matched. |
+| public int end(int group)  |  Returns the offset after the last character of the subsequence captured by the given group during the previous match operation.|
 
+Study Methods
+Study methods review the input string and return a Boolean indicating whether or not the pattern is found
 
+| Subexpression  | Matches |
+| ------------- | ------------- |
+| public boolean lookingAt() | Attempts to match the input sequence, starting at the beginning of the region, against the pattern. |
+| public boolean find()|  Attempts to find the next subsequence of the input sequence that matches the pattern. |
+| public boolean find(int start) | Resets this matcher and then attempts to find the next subsequence of the input sequence that matches the pattern, starting at the specified index. |
+| public boolean matches() | Attempts to match the entire region against the pattern. |
 
+Replacement Methods
+Replacement methods are useful methods for replacing text in an input string.
 
+| Subexpression  | Matches |
+| ------------- | ------------- |
+| public Matcher appendReplacement(StringBuffer sb, String replacement) | Implements a non-terminal append-and-replace step. |
+| public StringBuffer appendTail(StringBuffer sb) | Implements a terminal append-and-replace step. |
+| public String replaceAll(String replacement) | Replaces every subsequence of the input sequence that matches the pattern with the given replacement string. |
+| public String replaceFirst(String replacement) | Replaces the first subsequence of the input sequence that matches the pattern with the given replacement string. |
+| public static String quoteReplacement(String s) | Returns a literal replacement String for the specified String. This method produces a String that will work as a literal replacement s in the appendReplacement method of the Matcher class. |
 
+### The Start and End Methods
+Following is the example that counts the number of times the word "cat" appears in the input string 
+
+You can see that this example uses word boundaries to ensure that the letters "c" "a" "t" are not merely a substring in a longer word. It also gives some useful information about where in the input string the match has occurred.
+
+The start method returns the start index of the subsequence captured by the given group during the previous match operation, and the end returns the index of the last character matched, plus one.
+
+### The matches and lookingAt Methods
+The matches and lookingAt methods both attempt to match an input sequence against a pattern. The difference, however, is that matches requires the entire input sequence to be matched, while lookingAt does not.
+
+Both methods always start at the beginning of the input string. Here is the example explaining the functionality −
+
+#### View Example 2
+
+### The replaceFirst and replaceAll Methods
+
+The replaceFirst and replaceAll methods replace the text that matches a given regular expression. As their names indicate, replaceFirst replaces the first occurrence, and replaceAll replaces all occurrences.
+
+#### View Example 3
+
+### The appendReplacement and appendTail Methods
+
+The Matcher class also provides appendReplacement and appendTail methods for text replacement.
+
+#### View Example 4
+
+### The appendReplacement and appendTail Methods
+
+#### View Example 5
+
+PatternSyntaxException Class Methods
+
+A PatternSyntaxException is an unchecked exception that indicates a syntax error in a regular expression pattern. The PatternSyntaxException class provides the following methods to help you determine what went wrong
+
+| No. | Method & Description |
+| ------------- | ------------- |
+| public String getDescription() | Retrieves the description of the error. |
+| public int getIndex() | Retrieves the error index. |
+| public String getPattern() | Retrieves the erroneous regular expression pattern. |
+| public String getMessage() | Returns a multi-line string containing the description of the syntax error and its index, the erroneous regular expression pattern, and a visual indication of the error index within the pattern. |
 
 
 
